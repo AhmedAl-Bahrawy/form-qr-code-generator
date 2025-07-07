@@ -5,8 +5,10 @@ from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 app.secret_key = 'secret-key'
-UPLOAD_FOLDER = 'uploads'
-QR_FOLDER = 'qr_codes'
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+UPLOAD_FOLDER = os.path.join(BASE_DIR, 'uploads')
+QR_FOLDER = os.path.join(BASE_DIR, 'qr_codes')
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 os.makedirs(QR_FOLDER, exist_ok=True)
 
