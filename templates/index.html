@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ملتقى الجامعات في عطبرة</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header-image">
+            <img src="/static/images/uni-expo.jpg" alt="header" />
+        </div>
+        <div class="logo-section">
+            <img src="/static/images/uni-expo.jpeg" alt="logo" class="logo-img" />
+            <h2 class="expo-title">ملتقى الجامعات في عطبرة</h2>
+            <a href="#form-section" class="register-link">إستمرار التسجيل</a>
+        </div>
+        <form id="form-section" class="main-form" method="POST" enctype="multipart/form-data">
+            <h3 class="form-title">البيانات الشخصية</h3>
+            <div class="form-group">
+                <label for="name">الاسم<span class="required">*</span></label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">رقم الهاتف (الواتساب)<span class="required">*</span></label>
+                <div class="phone-input">
+                    <select id="country_code" name="country_code">
+                        <option value="20" selected>EG +20</option>
+                        <option value="966">SA +966</option>
+                        <option value="249">SD +249</option>
+                        <option value="971">UAE +971</option>
+                        <option value="964">IQ +964</option>
+                        <option value="962">JO +962</option>
+                        <option value="965">KW +965</option>
+                        <option value="968">OM +968</option>
+                        <option value="973">BH +973</option>
+                        <option value="974">QA +974</option>
+                        <option value="963">SY +963</option>
+                        <option value="961">LB +961</option>
+                        <option value="218">LY +218</option>
+                        <option value="212">MA +212</option>
+                        <option value="213">DZ +213</option>
+                        <option value="216">TN +216</option>
+                        <option value="970">PS +970</option>
+                        <option value="967">YE +967</option>
+                        <option value="93">AF +93</option>
+                        <option value="90">TR +90</option>
+                        <option value="1">US +1</option>
+                    </select>
+                    <input type="text" id="phone" name="phone" required pattern="[0-9]{6,15}" placeholder="رقم الهاتف بدون صفر في البداية">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">البريد الإلكتروني</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="major">التخصص المراد</label>
+                <input type="text" id="major" name="major">
+            </div>
+            <div class="form-group">
+                <label for="stage">المرحلة الحالية<span class="required">*</span></label>
+                <select id="stage" name="stage" required>
+                    <option value="ثانوي">ثانوي</option>
+                    <option value="جامعي">جامعي</option>
+                    <option value="ولي أمر">ولي أمر</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="university_type">نوع الجامعة المهتم بها<span class="required">*</span></label>
+                <select id="university_type" name="university_type" required>
+                    <option value="حكومي">حكومي</option>
+                    <option value="خاص">خاص</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="mother_name">اسم الأم باللغة الإنجليزية (اختياري)</label>
+                <input type="text" id="mother_name" name="mother_name">
+            </div>
+            <div class="form-group">
+                <label for="personal_photo">الصورة الشخصية (jpg, jpeg, png)</label>
+                <input type="file" id="personal_photo" name="personal_photo" accept=".jpg,.jpeg,.png">
+            </div>
+            <div class="form-group">
+                <label for="passport">جواز السفر (pdf, jpg, jpeg, png)</label>
+                <input type="file" id="passport" name="passport" accept=".pdf,.jpg,.jpeg,.png">
+            </div>
+            <div class="form-group">
+                <label for="certificate">الشهادة الثانوية (pdf, jpg, jpeg, png)</label>
+                <input type="file" id="certificate" name="certificate" accept=".pdf,.jpg,.jpeg,.png">
+            </div>
+            <button type="submit" class="submit-btn">إرسال</button>
+        </form>
+    </div>
+</body>
+</html>
